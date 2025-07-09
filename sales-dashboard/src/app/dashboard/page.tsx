@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="h-screen w-screen bg-gray-50 flex flex-row overflow-hidden">
       {/* Sidebar */}
-      <div className="hidden lg:flex">
+      <div className="hidden xl:flex">
         <SlideBar />
       </div>
 
@@ -34,24 +34,24 @@ export default function Home() {
             </div>
 
             {/* Sales Target + Chart */}
-            <div className="col-span-12 lg:col-span-6 flex flex-col gap-5">
+            <div className="col-span-12 xl:col-span-6 flex flex-col justify-between">
               <SalesTarget />
               <ThisYearSales />
             </div>
 
             {/* Stats + Promo */}
-            <div className="col-span-12 lg:col-span-6 flex flex-col gap-5">
+            <div className="col-span-12 xl:col-span-6 flex flex-col gap-[22px]">
               <Stats />
               <SalesPromo />
             </div>
 
             {/* Customer Growth */}
-            <div className="col-span-12 lg:col-span-5">
+            <div className="col-span-12 xl:col-span-5">
               <CustomerGrowth />
             </div>
 
             {/* Product List */}
-            <div className="col-span-12 lg:col-span-7">
+            <div className="col-span-12 xl:col-span-7">
               <ProductList />
             </div>
           </div>

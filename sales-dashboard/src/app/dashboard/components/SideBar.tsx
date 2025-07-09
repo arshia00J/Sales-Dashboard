@@ -7,7 +7,7 @@ export default function Sidebar() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <div className="hidden lg:flex w-[280px] h-screen px-[16px] pt-[32px] bg-white flex-col items-center gap-[45px]">
+    <div className="hidden xl:flex w-[280px] h-screen px-[16px] pt-[32px] bg-white flex-col items-center gap-[45px]">
       <div className="w-full">
         <div className="flex flex-row w-full h-[31px] gap-[88px] mb-[45px]">
           <Image

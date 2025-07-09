@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SalesPromoCard() {
   return (
-    <div className="relative bg-gradient-to-tr from-[#1A71F6] to-[#5D326CCF] text-white rounded-[20px] p-4 w-full">
+    <div className="relative bg-gradient-to-tr from-[#1A71F6] to-[#5D326CCF] text-white rounded-[20px] p-4 w-full xl:h-[219px]">
       
       <div className="absolute bottom-0 right-0">
         <Image

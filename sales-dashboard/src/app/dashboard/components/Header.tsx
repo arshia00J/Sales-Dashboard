@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex lg:hidden items-center justify-between px-5 py-4 bg-white">
+    <div className="flex xl:hidden items-center justify-between px-5 py-4 bg-white">
       
       {/* Profile */}
       <div className="flex items-center gap-4 relative">

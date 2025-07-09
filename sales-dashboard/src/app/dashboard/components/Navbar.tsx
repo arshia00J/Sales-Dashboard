@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="w-full hidden lg:flex justify-between items-center px-6 py-3 border-b-[2px] border-[#E7E7E7] bg-white">
+    <div className="w-full hidden xl:flex justify-between items-center px-6 py-3 border-b-[2px] border-[#E7E7E7] bg-white">
       {/* Search box */}
       <div className="relative w-[300px]">
         <input
           type="text"
           placeholder="Search product"
-          className="w-full pl-4 pr-11 py-[9.5px] border border-[#B0B0B0] rounded-[12px] text-sm text-[#949494] focus:outline-none focus:ring-2 focus:ring-blue-300"
+          className="w-full pl-4 pr-11 py-[9.5px] border border-[#B0B0B0] rounded-[12px] text-sm text-[#949494] focus:outline-none focus:ring-2 focus:ring-blue-300 "
         />
         <Image
           src="/images/search.png"

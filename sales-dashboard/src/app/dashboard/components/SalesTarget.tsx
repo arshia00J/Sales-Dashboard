@@ -1,7 +1,7 @@
 export default function SalesTarget(){
     return(
     <div>
-        <div className="bg-white  border border-[#E7E7E7] rounded-[24px] p-4 w-full lg:h-[151px]">
+        <div className="bg-white  border border-[#E7E7E7] rounded-[24px] p-4 w-full xl:h-[151px]">
           <h3 className="text-[#454545] font-semibold text-[16px] leading-[130%] mb-4">
             Sales Target
           </h3>

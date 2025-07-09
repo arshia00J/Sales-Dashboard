@@ -32,7 +32,7 @@ const data = [
 
 export default function ThisYearSales() {
   return (
-    <div className="bg-white border border-[#E7E7E7] rounded-[24px] p-4 w-full">
+    <div className="bg-white border border-[#E7E7E7] rounded-[24px] p-4 w-full xl:h-[382px]">
       
       {/* Top Title + Action */}
       <div className="flex items-center justify-between mb-4">

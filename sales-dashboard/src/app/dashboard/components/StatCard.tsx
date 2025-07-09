@@ -14,9 +14,9 @@ export default function StatCard({
   isPositive,
 }: StatCardProps) {
   return (
-    <div className="bg-white border border-[#E7E7E7] rounded-[20px] p-4 w-full lg:h-[151px]">
+    <div className="group bg-white hover:bg-[#1A71F6] transition-colors duration-300 border border-[#E7E7E7] rounded-[20px] p-4 w-full xl:h-[151px] hover:cursor-pointer">
       <div className="flex justify-between items-start mb-[45px]">
-        <h3 className="text-[#454545] text-[16px] font-semibold leading-[130%]">
+        <h3 className="text-[#454545] group-hover:text-white text-[16px] font-semibold leading-[130%]">
           {title}
         </h3>
         <Image
@@ -24,24 +24,28 @@ export default function StatCard({
           alt="arrow"
           width={24}
           height={24}
-          className="flex-shrink-0"
+          className="flex-shrink-0 group-hover:invert"
         />
       </div>
 
-      <p className="text-[#1A71F6] text-[24px] font-semibold leading-[130%] mb-1.5">
+      <p className="text-[#1A71F6] group-hover:text-white text-[24px] font-semibold leading-[130%] mb-1.5">
         {value}
       </p>
 
       <div className="flex items-center gap-1 text-[12px] font-normal leading-[140%]">
         <span
           className={`flex items-center gap-1 ${
-            isPositive ? "text-green-700" : "text-red-600"
+            isPositive
+              ? "text-green-700 group-hover:text-green-500"
+              : "text-red-600 group-hover:text-red-500"
           }`}
         >
           <Image
-            src={isPositive
-            ? "/images/akar-icons_statistic-up.png"
-            : "/images/akar-icons_statistic-down.png"}
+            src={
+              isPositive
+                ? "/images/akar-icons_statistic-up.png"
+                : "/images/akar-icons_statistic-down.png"
+            }
             alt="chart"
             width={20}
             height={20}
@@ -49,8 +53,9 @@ export default function StatCard({
           />
           {percentage}
         </span>
-        <span className="text-[#737373]">From last week</span>
+        <span className="text-[#737373] group-hover:text-white">From last week</span>
       </div>
     </div>
+
   );
 }

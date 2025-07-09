@@ -16,54 +16,111 @@ const products: Product[] = [
   {
     id: "021231",
     name: "Kanky Kitadakate (Green)",
-    price: 32032,
+    price: 20,
     sales: 3000,
     image: "/images/Produk.png",
     status: "Success",
   },
-    {
+  {
     id: "021231",
     name: "Kanky Kitadakate (Green)",
-    price: 32032,
-    sales: 3000,
+    price: 20,
+    sales: 2311,
     image: "/images/Produk.png",
-    status: "Pending",
+    status: "Success",
   },
-    {
+  {
     id: "021231",
     name: "Kanky Kitadakate (Green)",
-    price: 32032,
-    sales: 3000,
+    price: 20,
+    sales: 2111,
     image: "/images/Produk.png",
-    status: "Failed",
+    status: "Success",
+  },
+  {
+    id: "021231",
+    name: "Kanky Kitadakate (Green)",
+    price: 20,
+    sales: 1661,
+    image: "/images/Produk.png",
+    status: "Success",
   },
 ];
 
 export default function ProductList() {
   return (
     <div className="bg-white border border-[#E7E7E7] rounded-[24px] p-4 w-full">
-      {/* Header */}
       <div className="flex justify-between mb-6">
         <h3 className="text-[16px] text-[#454545] font-semibold leading-[130%]">Product Popular</h3>
-        <div className="flex items-center gap-1 text-[12px] font-semibold text-[#3D3D3D] cursor-pointer leading-[140%]">
+        <div className="flex items-center gap-1 text-[12px] font-semibold text-[#3D3D3D] cursor-pointer">
           Show All
-          <Image src="/images/arrow-up-right.png" alt="arrow" width={24} height={24} />
+          <Image src="/images/arrow-up-right.png" alt="arrow" width={16} height={16} />
         </div>
       </div>
 
-      {/* Table header */}
-      <div className="border-[#F6F6F6] border-[1px] rounded-2xl">
-    <div className="bg-[#F6F6F6] px-4 py-[14.5px] rounded-t-2xl  flex justify-between text-[12px] text-[#2A2A2A] font-bold">
-        <span>Product</span>
-        <Image src={"/images/_sorter.svg"} alt="sorter" width={11} height={22}/>
+      <div className="hidden md:block">
+        <div className="rounded-[16px] overflow-hidden border border-[#E7E7E7]">
+          <table className="w-full table-fixed">
+            <thead>
+              <tr className="bg-[#F6F6F6] text-[#2A2A2A] text-[12px] font-bold h-[46px]">
+                <th className="text-left px-4 py-3 w-[40%]">Product</th>
+                <th className="text-left px-4 py-3 w-[20%]">Price</th>
+                <th className="text-left px-4 py-3 w-[20%]">Sales</th>
+                <th className="text-left px-4 py-3 w-[20%]">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products.map((product, idx) => (
+                <tr key={idx} className="border-t border-[#F6F6F6] h-[72px]">
+                  <td className="flex items-center gap-3 px-4 py-2">
+                    <Image
+                      src={product.image ?? "/images/Produk.png"}
+                      alt={product.name}
+                      width={40}
+                      height={40}
+                      className="rounded"
+                    />
+                    <div>
+                      <p className="text-[11px] text-[#737373]">{product.id}</p>
+                      <p className="text-[14px] text-[#454545]">{product.name}</p>
+                    </div>
+                  </td>
+                  <td className="px-4 text-[#1A71F6] font-semibold">
+                    ${product.price?.toFixed(2)}
+                  </td>
+                  <td className="px-4 font-semibold text-[#3D3D3D]">
+                    {product.sales?.toLocaleString()}
+                  </td>
+                  <td className="px-4">
+                    <span
+                      className={`text-xs px-3 py-1 rounded-xl font-medium ${
+                        product.status === "Success"
+                          ? "bg-[#F3FFC8] text-[#28B652]"
+                          : product.status === "Pending"
+                          ? "bg-yellow-100 text-yellow-700"
+                          : product.status === "Failed"
+                          ? "bg-red-100 text-red-600"
+                          : "bg-gray-200 text-gray-700"
+                      }`}
+                    >
+                      {product.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      {/* Items */}
-      {products.map((product, idx) => (
-        <ProductItem key={idx} product={product} />
-      ))}
+
+      <div className="block md:hidden">
+        <div className="border-[#F6F6F6] border-[1px] rounded-2xl mt-4">
+          {products.map((product, idx) => (
+            <ProductItem key={idx} product={product} />
+          ))}
+        </div>
       </div>
-      
     </div>
   );
 }
@@ -73,7 +130,7 @@ function ProductItem({ product }: { product: Product }) {
 
   const statusColor =
     product.status === "Success"
-        ? "bg-[#F3FFC8] text-[#28B652]"
+      ? "bg-[#F3FFC8] text-[#28B652]"
       : product.status === "Pending"
       ? "bg-yellow-100 text-yellow-700"
       : product.status === "Failed"
@@ -102,32 +159,32 @@ function ProductItem({ product }: { product: Product }) {
           </div>
         </div>
         <Image
-            src={"/images/icon_arrow.png"}
-            alt="arrow"
-            width={32}
-            height={28}
-            className={!expanded ? "rotate-180" : ""}
+          src={"/images/icon_arrow.png"}
+          alt="arrow"
+          width={32}
+          height={28}
+          className={!expanded ? "rotate-180" : ""}
         />
       </div>
 
       {expanded && (
         <div className="mt-3 space-y-2 text-sm text-[#444]">
           <div className="flex gap-5 items-center">
-            <span className="text[#737373] text-xs font-normal">Price</span>
+            <span className="text-[#737373] text-xs font-normal">Price</span>
             <div className="text-[#323130] font-bold">
-                {product.price !== undefined ? `$${product.price.toLocaleString()}` : "N/A"}
+              {product.price !== undefined
+                ? `$${product.price.toLocaleString()}`
+                : "N/A"}
             </div>
-            
           </div>
           <div className="flex gap-5 items-center">
-            <span className="text[#737373] text-xs font-normal">Sales</span>
+            <span className="text-[#737373] text-xs font-normal">Sales</span>
             <div className="text-[#323130] font-bold">
-                {product.sales ?? "N/A"}
+              {product.sales ?? "N/A"}
             </div>
-            
           </div>
           <div className="flex gap-5 items-center">
-            <span className="text[#737373] text-xs font-normal">Status</span>
+            <span className="text-[#737373] text-xs font-normal">Status</span>
             <span className={`text-xs p-1.5 rounded-xl ${statusColor}`}>
               {product.status ?? "Unknown"}
             </span>
