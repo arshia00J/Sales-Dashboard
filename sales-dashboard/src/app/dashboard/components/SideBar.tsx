@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Sidebar() {
-  const [isProductOpen, setIsProductOpen] = useState(true);
+  const [isProductOpen, setIsProductOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (

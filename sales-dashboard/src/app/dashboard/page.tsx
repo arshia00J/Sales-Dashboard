@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="h-screen w-screen bg-gray-50 flex flex-row overflow-hidden">
       {/* Sidebar */}
-      <div className="hidden xl:flex">
+      <div className="hidden xl:flex xl:overflow-y-auto">
         <SlideBar />
       </div>
 

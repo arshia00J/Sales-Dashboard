@@ -19,7 +19,7 @@ const products: Product[] = [
     price: 20,
     sales: 3000,
     image: "/images/Produk.png",
-    status: "Success",
+    status: "Pending",
   },
   {
     id: "021231",
@@ -35,7 +35,7 @@ const products: Product[] = [
     price: 20,
     sales: 2111,
     image: "/images/Produk.png",
-    status: "Success",
+    status: "Failed",
   },
   {
     id: "021231",
@@ -71,31 +71,30 @@ export default function ProductList() {
             </thead>
             <tbody>
               {products.map((product, idx) => (
-                <tr key={idx} className="border-t border-[#F6F6F6] h-[72px]">
-                  <td className="flex items-center gap-3 px-4 py-2">
+                <tr key={idx} className="border-t border-[#F6F6F6] h-[65px]">
+                  <td className="flex items-center gap-2 p-3">
                     <Image
                       src={product.image ?? "/images/Produk.png"}
                       alt={product.name}
-                      width={40}
-                      height={40}
-                      className="rounded"
+                      width={41}
+                      height={41}
                     />
                     <div>
-                      <p className="text-[11px] text-[#737373]">{product.id}</p>
-                      <p className="text-[14px] text-[#454545]">{product.name}</p>
+                      <p className="text-[12px] text-[#454545] font-normal">{product.id}</p>
+                      <p className="text-[14px] text-[#454545] font-semibold">{product.name}</p>
                     </div>
                   </td>
-                  <td className="px-4 text-[#1A71F6] font-semibold">
+                  <td className="px-3 text-[#323130] text-[14px] font-semibold">
                     ${product.price?.toFixed(2)}
                   </td>
-                  <td className="px-4 font-semibold text-[#3D3D3D]">
+                  <td className="px-3 font-semibold text-[#323130] text-[14px]">
                     {product.sales?.toLocaleString()}
                   </td>
-                  <td className="px-4">
+                  <td className="px-3">
                     <span
-                      className={`text-xs px-3 py-1 rounded-xl font-medium ${
+                      className={`text-xs px-2 py-1.5 rounded-xl font-medium ${
                         product.status === "Success"
-                          ? "bg-[#F3FFC8] text-[#28B652]"
+                          ? "bg-[#B2FFB4] text-[#04910C]"
                           : product.status === "Pending"
                           ? "bg-yellow-100 text-yellow-700"
                           : product.status === "Failed"
