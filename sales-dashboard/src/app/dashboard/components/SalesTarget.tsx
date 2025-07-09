@@ -1,12 +1,7 @@
 export default function SalesTarget(){
     return(
     <div>
-        <div className="flex flex-col mb-[20px]">
-          <h1 className="font-semibold leading-[130%] text-2xl text-[#2A2A2A]">Dashboard</h1>
-          <p className="font-normal leading-[150%] text-[14px] text-[#888888]">Dashboard</p>
-        </div>
-
-        <div className="bg-white border border-[#E7E7E7] rounded-[24px] p-4 w-full">
+        <div className="bg-white  border border-[#E7E7E7] rounded-[24px] p-4 w-full lg:h-[151px]">
           <h3 className="text-[#454545] font-semibold text-[16px] leading-[130%] mb-4">
             Sales Target
           </h3>

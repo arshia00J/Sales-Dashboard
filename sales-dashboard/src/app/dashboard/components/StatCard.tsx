@@ -14,7 +14,7 @@ export default function StatCard({
   isPositive,
 }: StatCardProps) {
   return (
-    <div className="bg-white border border-[#E7E7E7] rounded-[20px] p-4 w-full">
+    <div className="bg-white border border-[#E7E7E7] rounded-[20px] p-4 w-full lg:h-[151px]">
       <div className="flex justify-between items-start mb-[45px]">
         <h3 className="text-[#454545] text-[16px] font-semibold leading-[130%]">
           {title}

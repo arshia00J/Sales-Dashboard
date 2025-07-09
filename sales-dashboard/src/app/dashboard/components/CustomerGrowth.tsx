@@ -22,7 +22,7 @@ return(
             </div>
         </div>
 
-        <div className="flex overflow-scroll gap-3">
+        <div className="flex gap-3">
             <div className="flex flex-row items-center gap-0.5 text-[#737373] font-normal leading-[140%]">
                 <div className="w-3.5 h-3.5 bg-lime-400 rounded-full text-[12px]"></div>
                 <p className="">East Java <span className="font-bold text-gray-600">(50%)</span></p>

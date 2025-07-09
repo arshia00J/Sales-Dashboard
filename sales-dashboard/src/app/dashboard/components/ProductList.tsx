@@ -113,21 +113,21 @@ function ProductItem({ product }: { product: Product }) {
       {expanded && (
         <div className="mt-3 space-y-2 text-sm text-[#444]">
           <div className="flex gap-5 items-center">
-            <span className="text[#737373] text-xs font-normal">Price:</span>
+            <span className="text[#737373] text-xs font-normal">Price</span>
             <div className="text-[#323130] font-bold">
                 {product.price !== undefined ? `$${product.price.toLocaleString()}` : "N/A"}
             </div>
             
           </div>
           <div className="flex gap-5 items-center">
-            <span className="text[#737373] text-xs font-normal">Sales:</span>
+            <span className="text[#737373] text-xs font-normal">Sales</span>
             <div className="text-[#323130] font-bold">
                 {product.sales ?? "N/A"}
             </div>
             
           </div>
           <div className="flex gap-5 items-center">
-            <span className="text[#737373] text-xs font-normal">Status:</span>
+            <span className="text[#737373] text-xs font-normal">Status</span>
             <span className={`text-xs p-1.5 rounded-xl ${statusColor}`}>
               {product.status ?? "Unknown"}
             </span>
