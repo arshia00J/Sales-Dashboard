@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/your-repo-name', // ⚠️ Required for GitHub Pages
+  basePath: '/Sales-Dashboard/sales-dashboard',
 };
 
 module.exports = nextConfig;
