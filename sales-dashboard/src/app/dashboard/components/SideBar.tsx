@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Sidebar() {
@@ -65,7 +66,7 @@ export default function Sidebar() {
 
           {isProductOpen && (
             <div className="p-2 ml-2 flex flex-col gap-4 text-[#888888] justify-center text-[14px]">
-              <p>Sneakers</p>
+              <Link href={"/product/sneakers"}><p>Sneakers</p></Link>
               <p>Jacket</p>
               <p>T-Shirt</p>
               <p>Bag</p>
