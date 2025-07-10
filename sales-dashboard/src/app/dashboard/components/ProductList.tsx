@@ -58,7 +58,7 @@ export default function ProductList() {
         </div>
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden xl:block">
         <div className="rounded-[16px] overflow-hidden border border-[#E7E7E7]">
           <table className="w-full table-fixed">
             <thead>
@@ -113,7 +113,7 @@ export default function ProductList() {
       </div>
 
 
-      <div className="block md:hidden">
+      <div className="block xl:hidden">
         <div className="border-[#F6F6F6] border-[1px] rounded-2xl mt-4">
           {products.map((product, idx) => (
             <ProductItem key={idx} product={product} />

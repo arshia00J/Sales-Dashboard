@@ -2,15 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
+  const pathname = usePathname();
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <div className="hidden xl:flex w-[280px] h-screen px-[16px] pt-[32px] bg-white flex-col items-center gap-[45px]">
+    <div className="hidden xl:flex xl:overflow-y-auto w-[280px] h-screen px-[16px] pt-[32px] bg-white flex-col items-center gap-[45px]">
       <div className="w-full">
-        <div className="flex flex-row w-full h-[31px] gap-[88px] mb-[45px]">
+        <div className="flex flex-row w-full items-center justify-between mb-[45px]">
           <Image
             src={"/images/Logo.png"}
             alt="logo-culters"
@@ -42,13 +44,16 @@ export default function Sidebar() {
         <div>
           <h3 className="text-[12px] text-[#888888] mb-2">GENERAL</h3>
 
-          <div className="flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1">
-            <Image src="/images/home-2.png" alt="dashboard" width={24} height={24} />
-            <p>Dashboard</p>
-          </div>
+          <Link href={"/dashboard"}>
+            <div className={pathname == "/dashboard" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]"}>
+              <Image src="/images/home-2.png" alt="dashboard" width={24} height={24} />
+              <p>Dashboard</p>
+            </div>
+          </Link>
+
 
           <div
-            className="flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888] cursor-pointer relative"
+            className={pathname.startsWith("/product") ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1 relative" : "cursor-pointer relative flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]"}
             onClick={() => setIsProductOpen(!isProductOpen)}
           >
             <Image src="/images/store.png" alt="product" width={24} height={24} />
@@ -66,24 +71,24 @@ export default function Sidebar() {
 
           {isProductOpen && (
             <div className="p-2 ml-2 flex flex-col gap-4 text-[#888888] justify-center text-[14px]">
-              <Link href={"/product/sneakers"}><p>Sneakers</p></Link>
+              <Link href={"/product/sneakers"}><p className={pathname == "/product/sneakers" ? "text-[#1A71F6] font-bold" : ""}>Sneakers</p></Link>
               <p>Jacket</p>
               <p>T-Shirt</p>
               <p>Bag</p>
             </div>
           )}
 
-          <div className="flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]">
+          <div className={pathname == "/transaction" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]"}>
             <Image src="/images/note-01.png" alt="transaction" width={24} height={24} />
             <p>Transaction (441)</p>
           </div>
 
-          <div className="flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]">
+          <div className={pathname == "/customers" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]"}>
             <Image src="/images/user-group.png" alt="customers" width={24} height={24} />
             <p>Customers</p>
           </div>
 
-          <div className="flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]">
+          <div className={pathname == "/salesreport" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]"}>
             <Image src="/images/line-chart.png" alt="sales" width={24} height={24} />
             <p>Sales Report</p>
           </div>
@@ -92,12 +97,12 @@ export default function Sidebar() {
         <div className="mt-6">
           <h3 className="text-[12px] text-[#888888] mb-2">TOOLS</h3>
 
-          <div className="flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]">
+          <div className={pathname == "/settings" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]"}>
             <Image src="/images/settings.png" alt="settings" width={24} height={24} />
             <p>Account & Settings</p>
           </div>
 
-          <div className="flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]">
+          <div className={pathname == "/help" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888]"}>
             <Image src="/images/help.png" alt="help" width={24} height={24} />
             <p>Help</p>
           </div>

@@ -20,7 +20,7 @@ export default function SalesTarget(){
 
           <div className="relative h-[12px] bg-[#E7E7E7] rounded-full">
             <div className="absolute top-0 left-0 h-full bg-[#1A71F6] rounded-l-full w-[70%]"></div>
-            <div className="absolute top-1/2 -translate-y-1/2 left-[65%] w-[30px] h-[30px] bg-[#D9D9D9] rounded-full shadow-md"></div>
+            <div className="absolute top-1/2 -translate-y-1/2 left-[calc(70%-15px)] w-[30px] h-[30px] bg-[#D9D9D9] rounded-full shadow-md"></div>
           </div>
         </div>
 

@@ -1,5 +1,5 @@
-import RoutingBar from "./components/RoutingBar";
-import ProductList from "./components/ProductList";
+import RoutingBar from "../components/RoutingBar";
+import ProductInfo from "./components/ProductInfo";
 
 export default function Home() {
   return (
@@ -11,10 +11,9 @@ export default function Home() {
         <div className="flex flex-col flex-1 overflow-y-auto">
 
 
-          <div className="p-5 bg-gray-100 gap-[22px] min-h-full">
+          <div className="p-5 bg-gray-100 gap-[22px] min-h-full lg:flex-row lg:items-start">
             <RoutingBar/>
-            <ProductList/>
-
+            <ProductInfo/>
            
           </div>
         </div>
