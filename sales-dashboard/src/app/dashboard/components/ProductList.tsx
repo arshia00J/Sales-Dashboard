@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import SmartImage from "@/app/StartImage";
 
 type Product = {
   id: string;
@@ -54,7 +54,7 @@ export default function ProductList() {
         <h3 className="text-[16px] text-[#454545] dark:text-[#F6F6F6] font-semibold leading-[130%]">Product Popular</h3>
         <div className="flex items-center gap-1 text-[12px] font-semibold text-[#3D3D3D] dark:text-[#F6F6F6] cursor-pointer">
           Show All
-          <Image src="/images/arrow-up-right.png" alt="arrow" width={16} height={16} className="dark:invert" />
+          <SmartImage src="/images/arrow-up-right.png" alt="arrow" width={16} height={16} className="dark:invert" />
         </div>
       </div>
 
@@ -73,7 +73,7 @@ export default function ProductList() {
               {products.map((product, idx) => (
                 <tr key={idx} className="border-t border-[#F6F6F6] dark:border-[#3D3D3D] h-[65px]">
                   <td className="flex items-center gap-2 p-3">
-                    <Image
+                    <SmartImage
                       src={product.image ?? "/images/Produk.png"}
                       alt={product.name}
                       width={41}
@@ -152,7 +152,7 @@ function ProductItem({ product }: { product: Product }) {
       >
         <div className="flex items-center gap-3">
           {product.image && (
-            <Image
+            <SmartImage
               src={product.image}
               alt={product.name || "Product Image"}
               width={40}
@@ -166,7 +166,7 @@ function ProductItem({ product }: { product: Product }) {
             <p>{product.name}</p>
           </div>
         </div>
-        <Image
+        <SmartImage
           src={"/images/icon_arrow.png"}
           alt="arrow"
           width={32}

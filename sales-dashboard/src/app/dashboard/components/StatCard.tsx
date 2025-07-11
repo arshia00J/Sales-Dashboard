@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SmartImage from "@/app/StartImage";
 
 interface StatCardProps {
   title: string;
@@ -19,7 +19,7 @@ export default function StatCard({
         <h3 className="text-[#454545] dark:text-[#F6F6F6] group-hover:text-white text-[16px] font-semibold leading-[130%]">
           {title}
         </h3>
-        <Image
+        <SmartImage
           src="/images/arrow-up-right.png"
           alt="arrow"
           width={24}
@@ -40,7 +40,7 @@ export default function StatCard({
               : "text-red-600 group-hover:text-red-500"
           }`}
         >
-          <Image
+          <SmartImage
             src={
               isPositive
                 ? "/images/akar-icons_statistic-up.png"

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+import SmartImage from "@/app/StartImage";
 export default function PaginationBar() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 13;
@@ -43,14 +43,14 @@ export default function PaginationBar() {
           disabled={currentPage === 1}
           className="cursor-pointer disabled:opacity-50"
         >
-          <Image src={"/images/Icon_right.png"} alt="left icon" width={32} height={28} className="rotate-180 dark:invert"/>
+          <SmartImage src={"/images/Icon_right.png"} alt="left icon" width={32} height={28} className="rotate-180 dark:invert"/>
         </button>
         <button
           onClick={handleNext}
           disabled={currentPage === totalPages}
           className="cursor-pointer disabled:opacity-50"
         >
-          <Image src={"/images/Icon_right.png"} alt="right icon" className="dark:invert" width={32} height={28}/>
+          <SmartImage src={"/images/Icon_right.png"} alt="right icon" className="dark:invert" width={32} height={28}/>
         </button>
       </div>
     </div>

@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import SmartImage from "@/app/StartImage";
 import { useState } from "react";
 import { useProductStore } from "@/app/product/productStore";
 
@@ -51,7 +51,7 @@ export default function ProductTable() {
                   <input type="checkbox" />
                 </td>
                 <td className="flex items-center gap-2 px-2 py-2">
-                  <Image src={item.img} alt={item.name} width={40} height={40} />
+                  <SmartImage src={item.img} alt={item.name} width={40} height={40} />
                   <div>
                     <p className="text-[#1A71F6] text-[12px]">{item.sku}</p>
                     <p className="text-[#454545] dark:text-[#F6F6F6] text-sm">{item.name}</p>
@@ -74,9 +74,9 @@ export default function ProductTable() {
                 </td>
                 <td className="px-2">
                   <div className="flex gap-2">
-                    <Image src="/images/eye-open.png" alt="eye" width={20} height={20} className="dark:invert" />
-                    <Image src="/images/edit-03.png" alt="edit" width={20} height={20} className="dark:invert"/>
-                    <Image onClick={() => deleteHandler(item.sku, index)} className="cursor-pointer dark:invert" src="/images/delete-1.png" alt="delete" width={20} height={20} />
+                    <SmartImage src="/images/eye-open.png" alt="eye" width={20} height={20} className="dark:invert" />
+                    <SmartImage src="/images/edit-03.png" alt="edit" width={20} height={20} className="dark:invert"/>
+                    <SmartImage onClick={() => deleteHandler(item.sku, index)} className="cursor-pointer dark:invert" src="/images/delete-1.png" alt="delete" width={20} height={20} />
                   </div>
                 </td>
               </tr>
@@ -95,13 +95,13 @@ export default function ProductTable() {
         <div key={index} className="border-b last:border-none border-[#E7E7E7] dark:border-[#3D3D3D] px-3 py-4 ">
           <div className="flex gap-3 cursor-pointer" onClick={() => toggleItem(index)}>
             <input type="checkbox" className="w-[16.8px] h-[16.8px] border-[#454545] m-[3.6px] cursor-pointer" />
-            <Image src={item.img} alt={item.name} width={42} height={42} />
+            <SmartImage src={item.img} alt={item.name} width={42} height={42} />
             <div className="flex-1 gap-1 flex flex-col">
               <p className="text-[#1A71F6] text-[12px] font-normal">{item.sku}</p>
               <p className="text-sm text-[#454545] dark:text-[#F6F6F6] font-normal">{item.name}</p>
             </div>
             <button>
-              <Image
+              <SmartImage
                 src={"/images/icon_arrow.png"}
                 alt="arrow"
                 width={32}
@@ -143,9 +143,9 @@ export default function ProductTable() {
               <div className="flex items-center">
                 <span className="text-[#737373] dark:text-[#B0B0B0] w-[60px]">Action</span>
                 <div className="flex gap-4">
-                  <Image src={"/images/eye-open.png"} alt="eye" width={24} height={24} className="dark:invert" />
-                  <Image src={"/images/edit-03.png"} alt="edit" width={24} height={24} className="dark:invert"/>
-                  <Image onClick={() => deleteHandler(item.sku, index)} src={"/images/delete-1.png"} alt="delete" width={24} height={24} className="cursor-pointer dark:invert" />
+                  <SmartImage src={"/images/eye-open.png"} alt="eye" width={24} height={24} className="dark:invert" />
+                  <SmartImage src={"/images/edit-03.png"} alt="edit" width={24} height={24} className="dark:invert"/>
+                  <SmartImage onClick={() => deleteHandler(item.sku, index)} src={"/images/delete-1.png"} alt="delete" width={24} height={24} className="cursor-pointer dark:invert" />
                 </div>
               </div>
             </div>

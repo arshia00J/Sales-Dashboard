@@ -1,11 +1,11 @@
-import Image from "next/image";
+import SmartImage from "@/app/StartImage";
 
 export default function SalesPromoCard() {
   return (
     <div className="relative bg-gradient-to-tr from-[#1A71F6] to-[#5D326CCF] text-white rounded-[20px] p-4 w-full xl:h-[219px]">
       
       <div className="absolute bottom-0 right-0">
-        <Image
+        <SmartImage
             src={"/images/corner-decor-b.svg"}
             alt="decor"
             width={100}
@@ -14,7 +14,7 @@ export default function SalesPromoCard() {
       </div>
 
             <div className="absolute left-0 top-0">
-        <Image
+        <SmartImage
             src={"/images/corner-decor-t.svg"}
             alt="decor"
             width={10}

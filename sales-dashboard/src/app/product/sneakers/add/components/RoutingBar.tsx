@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SmartImage from "@/app/StartImage";
 import Link from "next/link";
 
 export default function RoutingBar() {
@@ -16,7 +16,7 @@ export default function RoutingBar() {
         </p>
         
         </Link>
-        <Image
+        <SmartImage
             src={"/images/arrow-right.png"}
             alt="arrow"
             width={16}
@@ -27,7 +27,7 @@ export default function RoutingBar() {
                 Product
             </p>
 
-        <Image
+        <SmartImage
             src={"/images/arrow-right.png"}
             alt="arrow"
             width={16}
@@ -40,7 +40,7 @@ export default function RoutingBar() {
           </Link>
 
 
-          <Image
+          <SmartImage
             src={"/images/arrow-right.png"}
             alt="arrow"
             width={16}

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SmartImage from "@/app/StartImage";
 
 
 import {
@@ -44,7 +44,7 @@ export default function ThisYearSales() {
           <p className="text-[12px] text-[#3D3D3D] dark:text-[#F6F6F6] font-semibold leading-[140%]">
             Show All
           </p>
-          <Image
+          <SmartImage
             src="/images/arrow-up-right.png"
             alt="arrow"
             width={24}

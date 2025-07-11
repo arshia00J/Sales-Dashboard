@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SmartImage from "@/app/StartImage";
 import ProductTable from "./ProductTable";
 import PaginationBar from "./PaginationBar";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export default function ProductList() {
           placeholder="Search for id, name product"
           className="w-full pl-4 pr-11 py-[9.5px] border border-[#B0B0B0] dark:text-[#949494] dark:border-[#D1D1D1] rounded-[12px] text-sm text-[#949494] focus:outline-none focus:ring-2 focus:ring-blue-300 "
         />
-        <Image
+        <SmartImage
           src="/images/search.png"
           alt="search"
           width={24}
@@ -27,7 +27,7 @@ export default function ProductList() {
     <div className="flex gap-3 items-center">
         <button className="flex items-center gap-1.5 border border-[#B0B0B0] dark:text-[#F6F6F6] rounded-xl p-2 text-[12px] font-bold text-[#454545]">
             Filter
-            <Image
+            <SmartImage
                 src={"/images/filter-list.png"}
                 alt="filter"
                 width={24}
@@ -38,7 +38,7 @@ export default function ProductList() {
 
         <button className="flex items-center gap-1.5 border border-[#B0B0B0] rounded-xl p-2 text-[12px] font-bold text-[#454545] dark:text-[#F6F6F6]">
             Export
-            <Image
+            <SmartImage
                 src={"/images/download-2.png"}
                 alt="filter"
                 width={24}
@@ -52,7 +52,7 @@ export default function ProductList() {
 <Link href={"/product/sneakers/add"}>
         <button className="flex cursor-pointer items-center gap-1.5 bg-[#1A71F6] text-white rounded-xl p-2 text-[12px] font-bold ml-auto">
             New Product
-            <Image
+            <SmartImage
                 src={"/images/add.png"}
                 alt="filter"
                 width={24}
@@ -89,7 +89,7 @@ export default function ProductList() {
     <div className="flex gap-3 items-center xl:hidden">
         <button className="flex items-center gap-1.5 border border-[#B0B0B0] rounded-xl p-2 text-[12px] font-bold text-[#454545] dark:text-[#F6F6F6]">
             Filter
-            <Image
+            <SmartImage
                 src={"/images/filter-list.png"}
                 alt="filter"
                 width={24}
@@ -100,7 +100,7 @@ export default function ProductList() {
 
         <button className="flex items-center gap-1.5 border border-[#B0B0B0] rounded-xl p-2 text-[12px] font-bold text-[#454545] dark:text-[#F6F6F6]">
             Export
-            <Image
+            <SmartImage
                 src={"/images/download-2.png"}
                 alt="filter"
                 width={24}
@@ -112,7 +112,7 @@ export default function ProductList() {
         <Link href={"/product/sneakers/add"}>
           <button className="cursor-pointer flex items-center gap-1.5 bg-[#1A71F6] text-white rounded-xl p-2 text-[12px] font-bold ml-auto">
               New Product
-              <Image
+              <SmartImage
                   src={"/images/add.png"}
                   alt="filter"
                   width={24}
