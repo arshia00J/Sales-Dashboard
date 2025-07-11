@@ -1,4 +1,4 @@
-import SmartImage from "@/app/StartImage";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
       
       {/* Profile */}
       <div className="flex items-center gap-4 relative">
-        <SmartImage
+        <Image
           src="/images/admin-profile.png"
           alt="admin profile"
           width={40}
@@ -24,14 +24,14 @@ export default function Home() {
 
       {/* Search & Menu Icons */}
       <div className="flex items-center gap-4">
-        <SmartImage
+        <Image
           src="/images/search.png"
           alt="search"
           width={24}
           height={24}
           className="dark:invert"
         />
-        <SmartImage
+        <Image
           src="/images/menu.png"
           alt="menu"
           width={24}

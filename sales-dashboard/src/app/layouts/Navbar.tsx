@@ -1,4 +1,4 @@
-import SmartImage from "@/app/StartImage";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -10,7 +10,7 @@ export default function Navbar() {
           placeholder="Search product"
             className="w-full pl-4 pr-11 py-[9.5px] border border-[#B0B0B0] dark:border-[#D1D1D1] rounded-[12px] text-sm text-[#949494] focus:outline-none focus:ring-2 focus:ring-blue-300 "
         />
-        <SmartImage
+        <Image
           src="/images/search.png"
           alt="search"
           width={24}
@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="flex items-center gap-4">
         {/* Mail icon with badge */}
         <div className="relative p-2 dark:bg-[#3D3D3D] bg-[#F6F6F6] rounded-[9px]">
-          <SmartImage
+          <Image
             src="/images/mail.png"
             alt="mail"
             width={20}
@@ -37,7 +37,7 @@ export default function Navbar() {
 
         {/* Notification icon with badge */}
         <div className="relative p-2 bg-[#F6F6F6] dark:bg-[#3D3D3D] rounded-[9px]">
-          <SmartImage
+          <Image
             src="/images/notifications.png"
             alt="notifications"
             width={20}
@@ -53,7 +53,7 @@ export default function Navbar() {
 
         {/* User Info */}
         <div className="flex items-center gap-2 relative">
-          <SmartImage
+          <Image
             src="/images/admin-profile.png"
             alt="profile"
             width={40}

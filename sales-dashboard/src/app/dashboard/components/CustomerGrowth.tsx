@@ -1,4 +1,4 @@
-import SmartImage from "@/app/StartImage";
+import Image from "next/image";
 
 export default function CustomerGrowth() {
 
@@ -12,7 +12,7 @@ return(
                 <p className="text-[12px] text-[#3D3D3D] dark:text-[#F6F6F6] font-semibold leading-[140%]">
                     Show All
                 </p>
-                <SmartImage
+                <Image
                     src="/images/arrow-up-right.png"
                     alt="arrow"
                     width={24}
@@ -42,7 +42,7 @@ return(
         </div>
 
         <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden mt-7">
-            <SmartImage
+            <Image
                 src="/images/map.png"
                 alt="map"
                 fill
