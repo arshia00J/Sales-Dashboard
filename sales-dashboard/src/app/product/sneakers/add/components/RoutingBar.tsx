@@ -16,7 +16,7 @@ export default function RoutingBar() {
         </p>
         
         </Link>
-            <Image
+        <Image
             src={"/images/arrow-right.png"}
             alt="arrow"
             width={16}
@@ -34,10 +34,25 @@ export default function RoutingBar() {
             height={16}
             />
           <Link href={"/product/sneakers"}>
-            <p className="text-[#1A71F6] text-[14px] font-bold">
+            <p>
                 Sneakers
             </p>       
           </Link>
+
+
+          <Image
+            src={"/images/arrow-right.png"}
+            alt="arrow"
+            width={16}
+            height={16}
+            />
+          <Link href={"/product/sneakers/add"}>
+            <p className="text-[#1A71F6] text-[14px] font-bold">
+                Add Product
+            </p>       
+          </Link>
+
+          
 
       </div>
       

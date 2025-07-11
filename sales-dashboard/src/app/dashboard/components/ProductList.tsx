@@ -49,20 +49,20 @@ const products: Product[] = [
 
 export default function ProductList() {
   return (
-    <div className="bg-white border border-[#E7E7E7] rounded-[24px] p-4 w-full">
+    <div className="bg-white dark:bg-[#1A1A1B] border border-[#E7E7E7] dark:border-[#3D3D3D] rounded-[24px] p-4 w-full">
       <div className="flex justify-between mb-6">
-        <h3 className="text-[16px] text-[#454545] font-semibold leading-[130%]">Product Popular</h3>
-        <div className="flex items-center gap-1 text-[12px] font-semibold text-[#3D3D3D] cursor-pointer">
+        <h3 className="text-[16px] text-[#454545] dark:text-[#F6F6F6] font-semibold leading-[130%]">Product Popular</h3>
+        <div className="flex items-center gap-1 text-[12px] font-semibold text-[#3D3D3D] dark:text-[#F6F6F6] cursor-pointer">
           Show All
-          <Image src="/images/arrow-up-right.png" alt="arrow" width={16} height={16} />
+          <Image src="/images/arrow-up-right.png" alt="arrow" width={16} height={16} className="dark:invert" />
         </div>
       </div>
 
       <div className="hidden xl:block">
-        <div className="rounded-[16px] overflow-hidden border border-[#E7E7E7]">
+        <div className="rounded-[16px] overflow-hidden border border-[#E7E7E7] dark:border-[#252525]">
           <table className="w-full table-fixed">
             <thead>
-              <tr className="bg-[#F6F6F6] text-[#2A2A2A] text-[12px] font-bold h-[46px]">
+              <tr className="bg-[#F6F6F6] dark:bg-[#101011] text-[#2A2A2A] dark:text-[#D5D5D5] text-[12px] font-bold h-[46px]">
                 <th className="text-left px-4 py-3 w-[40%]">Product</th>
                 <th className="text-left px-4 py-3 w-[20%]">Price</th>
                 <th className="text-left px-4 py-3 w-[20%]">Sales</th>
@@ -71,7 +71,7 @@ export default function ProductList() {
             </thead>
             <tbody>
               {products.map((product, idx) => (
-                <tr key={idx} className="border-t border-[#F6F6F6] h-[65px]">
+                <tr key={idx} className="border-t border-[#F6F6F6] dark:border-[#3D3D3D] h-[65px]">
                   <td className="flex items-center gap-2 p-3">
                     <Image
                       src={product.image ?? "/images/Produk.png"}
@@ -80,14 +80,14 @@ export default function ProductList() {
                       height={41}
                     />
                     <div>
-                      <p className="text-[12px] text-[#454545] font-normal">{product.id}</p>
-                      <p className="text-[14px] text-[#454545] font-semibold">{product.name}</p>
+                      <p className="text-[12px] text-[#454545] dark:text-[#3090FF] font-normal">{product.id}</p>
+                      <p className="text-[14px] text-[#454545] dark:text-[#F6F6F6] font-semibold">{product.name}</p>
                     </div>
                   </td>
-                  <td className="px-3 text-[#323130] text-[14px] font-semibold">
+                  <td className="px-3 text-[#323130] dark:text-[#F6F6F6] text-[14px] font-semibold">
                     ${product.price?.toFixed(2)}
                   </td>
-                  <td className="px-3 font-semibold text-[#323130] text-[14px]">
+                  <td className="px-3 font-semibold text-[#323130] dark:text-[#F6F6F6] text-[14px]">
                     {product.sales?.toLocaleString()}
                   </td>
                   <td className="px-3">
@@ -114,11 +114,19 @@ export default function ProductList() {
 
 
       <div className="block xl:hidden">
-        <div className="border-[#F6F6F6] border-[1px] rounded-2xl mt-4">
-          {products.map((product, idx) => (
-            <ProductItem key={idx} product={product} />
-          ))}
+        <div className="w-full h-[46px] pl-4 pt-[14.5px] bg-[#101011] rounded-t-[16px]">
+          <p className="text-[#F6F6F6] font-bold text-[12px]">Product</p>
         </div>
+          <div className="border-[#F6F6F6] dark:border-[#3D3D3D] border-[1px] rounded-b-2xl">
+            {products.map((product, idx) => (
+              <ProductItem key={idx} product={product} />
+            ))}
+          </div>
+
+        
+
+
+
       </div>
     </div>
   );
@@ -137,7 +145,7 @@ function ProductItem({ product }: { product: Product }) {
       : "bg-gray-200 text-gray-800";
 
   return (
-    <div className="border-b-[#F6F6F6] border-b-1 last:border-none px-3 py-4">
+    <div className="border-b-[#F6F6F6] dark:border-b-[#3D3D3D] border-b-1 last:border-none px-3 py-4">
       <div
         className="flex justify-between items-center cursor-pointer"
         onClick={() => setExpanded(!expanded)}
@@ -150,10 +158,11 @@ function ProductItem({ product }: { product: Product }) {
               width={40}
               height={40}
               className="rounded"
+      
             />
           )}
-          <div className="text-[14px] text-[#454545]">
-            <p className="text-xs text-[#454545]">{product.id}</p>
+          <div className="text-[14px] text-[#454545] dark:text-[#F6F6F6]">
+            <p className="text-xs text-[#454545] dark:text-[#1A71F6]">{product.id}</p>
             <p>{product.name}</p>
           </div>
         </div>
@@ -162,23 +171,23 @@ function ProductItem({ product }: { product: Product }) {
           alt="arrow"
           width={32}
           height={28}
-          className={!expanded ? "rotate-180" : ""}
+          className={!expanded ? "rotate-180 dark:invert" : "dark:invert"}
         />
       </div>
 
       {expanded && (
         <div className="mt-3 space-y-2 text-sm text-[#444]">
           <div className="flex gap-5 items-center">
-            <span className="text-[#737373] text-xs font-normal">Price</span>
-            <div className="text-[#323130] font-bold">
+            <span className="text-[#737373] dark:text-[#B0B0B0] text-xs font-normal">Price</span>
+            <div className="text-[#323130] dark:text-[#F6F6F6] font-bold">
               {product.price !== undefined
                 ? `$${product.price.toLocaleString()}`
                 : "N/A"}
             </div>
           </div>
           <div className="flex gap-5 items-center">
-            <span className="text-[#737373] text-xs font-normal">Sales</span>
-            <div className="text-[#323130] font-bold">
+            <span className="text-[#737373] dark:text-[#B0B0B0] text-xs font-normal">Sales</span>
+            <div className="text-[#323130] dark:text-[#F6F6F6] font-bold">
               {product.sales ?? "N/A"}
             </div>
           </div>

@@ -14,9 +14,9 @@ export default function StatCard({
   isPositive,
 }: StatCardProps) {
   return (
-    <div className="group bg-white hover:bg-[#1A71F6] transition-colors duration-300 border border-[#E7E7E7] rounded-[20px] p-4 w-full xl:h-[151px] hover:cursor-pointer">
+    <div className="group bg-white dark:bg-[#1A1A1B] hover:bg-[#1A71F6] transition-colors duration-300 dark:duration-0 border border-[#E7E7E7] dark:border-[#3D3D3D] rounded-[20px] p-4 w-full xl:h-[151px] hover:cursor-pointer">
       <div className="flex justify-between items-start mb-[45px]">
-        <h3 className="text-[#454545] group-hover:text-white text-[16px] font-semibold leading-[130%]">
+        <h3 className="text-[#454545] dark:text-[#F6F6F6] group-hover:text-white text-[16px] font-semibold leading-[130%]">
           {title}
         </h3>
         <Image

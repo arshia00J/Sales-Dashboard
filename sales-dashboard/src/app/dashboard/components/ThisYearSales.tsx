@@ -32,16 +32,16 @@ const data = [
 
 export default function ThisYearSales() {
   return (
-    <div className="bg-white border border-[#E7E7E7] rounded-[24px] p-4 w-full xl:h-[382px]">
+    <div className="bg-white dark:bg-[#1A1A1B] border border-[#E7E7E7] dark:border-[#3D3D3D] rounded-[24px] p-4 w-full xl:h-[382px]">
       
       {/* Top Title + Action */}
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-[#454545] text-[16px] font-semibold leading-[130%]">
+      <h3 className="text-[#454545] dark:text-[#F6F6F6] text-[16px] font-semibold leading-[130%]">
           Your Sales this year
         </h3>
 
         <div className="flex items-center gap-1 cursor-pointer">
-          <p className="text-[12px] text-[#3D3D3D] font-semibold leading-[140%]">
+          <p className="text-[12px] text-[#3D3D3D] dark:text-[#F6F6F6] font-semibold leading-[140%]">
             Show All
           </p>
           <Image
@@ -49,7 +49,7 @@ export default function ThisYearSales() {
             alt="arrow"
             width={24}
             height={24}
-            className="flex-shrink-0"
+            className="flex-shrink-0 dark:invert"
           />
         </div>
       </div>
@@ -57,12 +57,12 @@ export default function ThisYearSales() {
       {/* Indicators */}
       <div className="flex items-center gap-2 mb-2">
         <div className="w-[14px] h-[14px] bg-[#BCF328]"></div>
-        <p className="text-[#737373] text-[12px]">Average Sale Value</p>
+        <p className="text-[#737373] dark:text-[#B0B0B0] text-[12px]">Average Sale Value</p>
       </div>
 
       <div className="flex items-center gap-2">
         <div className="w-[14px] h-[14px] bg-[#1A71F6]"></div>
-        <p className="text-[#737373] text-[12px]">Average item persale</p>
+        <p className="text-[#737373] dark:text-[#B0B0B0] text-[12px]">Average item persale</p>
       </div>
 
       

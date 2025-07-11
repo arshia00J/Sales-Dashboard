@@ -1,4 +1,4 @@
-import RoutingBar from "../components/RoutingBar";
+import RoutingBar from "./components/RoutingBar";
 import ProductInfo from "./components/ProductInfo";
 
 export default function Home() {

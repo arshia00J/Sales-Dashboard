@@ -5,11 +5,11 @@ export default function ImageUploader() {
 
 return(
 
-<div className="flex bg-white flex-col p-4 border border-[#E7E7E7] rounded-[24px] w-full gap-4">
+<div className="flex bg-white dark:bg-[#1A1A1B] flex-col p-4 border border-[#E7E7E7] dark:border-[#3D3D3D] rounded-[24px] w-full gap-4">
 
     <div className="flex flex-col gap-2">
-        <h3 className="text-[#454545] font-semibold text-[22px]">Image Product</h3>
-        <p className="text-[12px] text-[#454545] font-normal"><span className="text-[#1A71F6]">Note :</span> Format photos  SVG, PNG, or JPG (Max size 4mb)</p>
+        <h3 className="text-[#454545] font-semibold text-[22px] dark:text-[#F6F6F6]">Image Product</h3>
+        <p className="text-[12px] text-[#454545] dark:text-[#F6F6F6] font-normal"><span className="text-[#1A71F6]">Note :</span> Format photos  SVG, PNG, or JPG (Max size 4mb)</p>
     </div>
 
     <div className="flex-wrap flex gap-4">
