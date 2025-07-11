@@ -43,14 +43,14 @@ export default function PaginationBar() {
           disabled={currentPage === 1}
           className="cursor-pointer disabled:opacity-50"
         >
-          <Image src={"/images/Icon right.png"} alt="left icon" width={32} height={28} className="rotate-180 dark:invert"/>
+          <Image src={"/images/Icon_right.png"} alt="left icon" width={32} height={28} className="rotate-180 dark:invert"/>
         </button>
         <button
           onClick={handleNext}
           disabled={currentPage === totalPages}
           className="cursor-pointer disabled:opacity-50"
         >
-          <Image src={"/images/Icon right.png"} alt="right icon" className="dark:invert" width={32} height={28}/>
+          <Image src={"/images/Icon_right.png"} alt="right icon" className="dark:invert" width={32} height={28}/>
         </button>
       </div>
     </div>
