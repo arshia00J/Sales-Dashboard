@@ -1,54 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-
-const sampleProducts = [
-  {
-    id: "021231",
-    name: "Story Honzo (Black)",
-    price: "$32.00",
-    size: 40,
-    qty: 234,
-    date: "04/17/23 at 8:25 PM",
-    status: "Available",
-    img: "/images/Produk.png",
-  },
-  {
-    id: "021232",
-    name: "Story Honzo (Cream)",
-    price: "$32.00",
-    size: 40,
-    qty: 234,
-    date: "04/17/23 at 8:25 PM",
-    status: "Out of Stock",
-    img: "/images/Produk.png",
-  },
-  {
-    id: "021233",
-    name: "Story Honzo (Green)",
-    price: "$32.00",
-    size: 40,
-    qty: 234,
-    date: "04/17/23 at 8:25 PM",
-    status: "Available",
-    img: "/images/Produk.png",
-  },
-];
+import { useProductStore } from "@/app/product/productStore";
 
 
 export default function ProductTable() {
 
-    const [products, setProducts] = useState(sampleProducts);
-
-    const deleteHandler = (id: string) => {
-        const index = products.findIndex((item) => item.id === id);
-        const updated = products.filter((item) => item.id !== id);
-
-        setOpenIndexes((prev) => prev.filter((i) => i !== index));
-
-        setProducts(updated);
-    };
-
+  const products = useProductStore((state) => state.products);
+  const removeProduct = useProductStore((state) => state.removeProduct);
 
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
@@ -59,6 +18,12 @@ export default function ProductTable() {
         : [...prev, index]
     );
   };
+
+  const deleteHandler = (id: string, index: number) => {
+    removeProduct(id);
+    setOpenIndexes((prev) => prev.filter((i) => i !== index));
+  };
+
 
   return (
     <div className="bg-white border border-[#E7E7E7] rounded-xl overflow-hidden">
@@ -88,7 +53,7 @@ export default function ProductTable() {
                 <td className="flex items-center gap-2 px-2 py-2">
                   <Image src={item.img} alt={item.name} width={40} height={40} />
                   <div>
-                    <p className="text-[#1A71F6] text-[12px]">{item.id}</p>
+                    <p className="text-[#1A71F6] text-[12px]">{item.sku}</p>
                     <p className="text-[#454545] text-sm">{item.name}</p>
                   </div>
                 </td>
@@ -111,7 +76,7 @@ export default function ProductTable() {
                   <div className="flex gap-2">
                     <Image src="/images/eye-open.png" alt="eye" width={20} height={20} />
                     <Image src="/images/edit-03.png" alt="edit" width={20} height={20} />
-                    <Image onClick={() => deleteHandler(item.id)} className="cursor-pointer" src="/images/delete-1.png" alt="delete" width={20} height={20} />
+                    <Image onClick={() => deleteHandler(item.sku, index)} className="cursor-pointer" src="/images/delete-1.png" alt="delete" width={20} height={20} />
                   </div>
                 </td>
               </tr>
@@ -132,7 +97,7 @@ export default function ProductTable() {
             <input type="checkbox" className="w-[16.8px] h-[16.8px] border-[#454545] m-[3.6px] cursor-pointer" />
             <Image src={item.img} alt={item.name} width={42} height={42} />
             <div className="flex-1 gap-1 flex flex-col">
-              <p className="text-[#1A71F6] text-[12px] font-normal">{item.id}</p>
+              <p className="text-[#1A71F6] text-[12px] font-normal">{item.sku}</p>
               <p className="text-sm text-[#454545] font-normal">{item.name}</p>
             </div>
             <button>
@@ -180,7 +145,7 @@ export default function ProductTable() {
                 <div className="flex gap-4">
                   <Image src={"/images/eye-open.png"} alt="eye" width={24} height={24} />
                   <Image src={"/images/edit-03.png"} alt="edit" width={24} height={24} />
-                  <Image onClick={() => deleteHandler(item.id)} src={"/images/delete-1.png"} alt="delete" width={24} height={24} className="cursor-pointer" />
+                  <Image onClick={() => deleteHandler(item.sku, index)} src={"/images/delete-1.png"} alt="delete" width={24} height={24} className="cursor-pointer" />
                 </div>
               </div>
             </div>

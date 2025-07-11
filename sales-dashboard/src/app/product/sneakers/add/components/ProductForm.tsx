@@ -1,30 +1,27 @@
 "use client";
-import { useState } from "react";
+import React from "react";
 
-export default function ProductForm() {
-  const [formData, setFormData] = useState({
-    sku: "",
-    productName: "",
-    size: "",
-    color: "",
-    category: "",
-    price: "",
-    quantity: "",
-    status: "",
-  });
+type Props = {
+  formData: {
+    sku: string;
+    productName: string;
+    size: string;
+    color: string;
+    category: string;
+    price: string;
+    quantity: string;
+    status: string;
+  };
+  setFormData: React.Dispatch<React.SetStateAction<Props["formData"]>>;
+};
 
+export default function ProductForm({ formData, setFormData }: Props) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
-
 <div className="flex bg-white flex-col p-4 border border-[#E7E7E7] rounded-[24px] w-full">
 
     <h3 className="text-[#454545] text-[22px] font-semibold mb-2">
@@ -34,7 +31,7 @@ export default function ProductForm() {
         Lorem ipsum dolor sit amet consectetur. Non ac nulla aliquam aenean in velit mattis.
     </p>
 
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form className="flex flex-col gap-4">
       <div className="flex flex-col gap-1.5">
         <label className="font-bold text-[14px] text-[#323130]">SKU</label>
         <input

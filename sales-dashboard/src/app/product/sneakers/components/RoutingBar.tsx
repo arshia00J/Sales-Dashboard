@@ -33,10 +33,12 @@ export default function RoutingBar() {
             width={16}
             height={16}
             />
-
+          <Link href={"/product/sneakers"}>
             <p className="text-[#1A71F6] text-[14px] font-bold">
                 Sneakers
-            </p>
+            </p>       
+          </Link>
+
       </div>
       
     </div>

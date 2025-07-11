@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProductTable from "./ProductTable";
 import PaginationBar from "./PaginationBar";
+import Link from "next/link";
 
 export default function ProductList() {
   return (
@@ -99,15 +100,20 @@ export default function ProductList() {
             />
         </button>
 
-        <button className="flex items-center gap-1.5 bg-[#1A71F6] text-white rounded-xl p-2 text-[12px] font-bold ml-auto">
-            New Product
-            <Image
-                src={"/images/add.png"}
-                alt="filter"
-                width={24}
-                height={24}
-            />
-        </button>
+        <Link href={"/product/sneakers/add"}>
+          <button className="cursor-pointer flex items-center gap-1.5 bg-[#1A71F6] text-white rounded-xl p-2 text-[12px] font-bold ml-auto">
+              New Product
+              <Image
+                  src={"/images/add.png"}
+                  alt="filter"
+                  width={24}
+                  height={24}
+              />
+          </button>
+        
+        
+        </Link>
+
     </div>
 
 <ProductTable/>
