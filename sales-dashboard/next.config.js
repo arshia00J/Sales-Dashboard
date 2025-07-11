@@ -1,9 +1,12 @@
-const isGithubPages = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  output: "export",
-  basePath: isGithubPages ? "/Sales-Dashboard" : "",
-  assetPrefix: isGithubPages ? "/Sales-Dashboard/" : "",
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: isProd ? '/sales-dashboard' : '',
+  assetPrefix: isProd ? '/sales-dashboard/' : '',
 };
 
 module.exports = nextConfig;
