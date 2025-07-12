@@ -43,7 +43,7 @@ return(
 
         <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden mt-7">
             <Image
-                src={"/Sales-Dashboard/map.png"}
+                src={"/map.png"}
                 alt="map"
                 fill
                 className="object-cover"
