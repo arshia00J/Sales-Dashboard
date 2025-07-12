@@ -6,7 +6,7 @@ export default function SalesPromoCard() {
       
       <div className="absolute bottom-0 right-0">
         <Image
-            src={"corner-decor-b.svg"}
+            src={"/corner-decor-b.svg"}
             alt="decor"
             width={100}
             height={260}
@@ -15,7 +15,7 @@ export default function SalesPromoCard() {
 
             <div className="absolute left-0 top-0">
         <Image
-            src={"corner-decor-t.svg"}
+            src={"/corner-decor-t.svg"}
             alt="decor"
             width={10}
             height={120}

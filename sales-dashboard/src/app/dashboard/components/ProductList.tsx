@@ -54,7 +54,7 @@ export default function ProductList() {
         <h3 className="text-[16px] text-[#454545] dark:text-[#F6F6F6] font-semibold leading-[130%]">Product Popular</h3>
         <div className="flex items-center gap-1 text-[12px] font-semibold text-[#3D3D3D] dark:text-[#F6F6F6] cursor-pointer">
           Show All
-          <Image src="arrow-up-right.png" alt="arrow" width={16} height={16} className="dark:invert" />
+          <Image src={"/arrow-up-right.png"} alt="arrow" width={16} height={16} className="dark:invert" />
         </div>
       </div>
 
@@ -167,7 +167,7 @@ function ProductItem({ product }: { product: Product }) {
           </div>
         </div>
         <Image
-          src={"icon_arrow.png"}
+          src={"/icon_arrow.png"}
           alt="arrow"
           width={32}
           height={28}

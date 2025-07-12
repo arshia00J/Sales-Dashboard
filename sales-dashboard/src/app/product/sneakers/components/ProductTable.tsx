@@ -74,9 +74,9 @@ export default function ProductTable() {
                 </td>
                 <td className="px-2">
                   <div className="flex gap-2">
-                    <Image src="eye-open.png" alt="eye" width={20} height={20} className="dark:invert" />
-                    <Image src="edit-03.png" alt="edit" width={20} height={20} className="dark:invert"/>
-                    <Image onClick={() => deleteHandler(item.sku, index)} className="cursor-pointer dark:invert" src="delete-1.png" alt="delete" width={20} height={20} />
+                    <Image src={"/eye-open.png"} alt="eye" width={20} height={20} className="dark:invert" />
+                    <Image src={"/edit-03.png"} alt="edit" width={20} height={20} className="dark:invert"/>
+                    <Image onClick={() => deleteHandler(item.sku, index)} className="cursor-pointer dark:invert" src={"/delete-1.png"} alt="delete" width={20} height={20} />
                   </div>
                 </td>
               </tr>
@@ -102,7 +102,7 @@ export default function ProductTable() {
             </div>
             <button>
               <Image
-                src={"icon_arrow.png"}
+                src={"/icon_arrow.png"}
                 alt="arrow"
                 width={32}
                 height={28}
@@ -143,9 +143,9 @@ export default function ProductTable() {
               <div className="flex items-center">
                 <span className="text-[#737373] dark:text-[#B0B0B0] w-[60px]">Action</span>
                 <div className="flex gap-4">
-                  <Image src={"eye-open.png"} alt="eye" width={24} height={24} className="dark:invert" />
-                  <Image src={"edit-03.png"} alt="edit" width={24} height={24} className="dark:invert"/>
-                  <Image onClick={() => deleteHandler(item.sku, index)} src={"delete-1.png"} alt="delete" width={24} height={24} className="cursor-pointer dark:invert" />
+                  <Image src={"/eye-open.png"} alt="eye" width={24} height={24} className="dark:invert" />
+                  <Image src={"/edit-03.png"} alt="edit" width={24} height={24} className="dark:invert"/>
+                  <Image onClick={() => deleteHandler(item.sku, index)} src={"/delete-1.png"} alt="delete" width={24} height={24} className="cursor-pointer dark:invert" />
                 </div>
               </div>
             </div>

@@ -20,7 +20,7 @@ export default function StatCard({
           {title}
         </h3>
         <Image
-          src="arrow-up-right.png"
+          src={"/arrow-up-right.png"}
           alt="arrow"
           width={24}
           height={24}

@@ -13,7 +13,7 @@ return(
                     Show All
                 </p>
                 <Image
-                    src="arrow-up-right.png"
+                    src={"/arrow-up-right.png"}
                     alt="arrow"
                     width={24}
                     height={24}
@@ -43,7 +43,7 @@ return(
 
         <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden mt-7">
             <Image
-                src="map.png"
+                src={"/map.png"}
                 alt="map"
                 fill
                 className="object-cover"
