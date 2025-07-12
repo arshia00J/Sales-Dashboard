@@ -18,7 +18,7 @@ export default function Sidebar({
       <div className="w-full">
         <div className="flex flex-row w-full items-center justify-between mb-[45px]">
           <Image
-            src={"/sales-dashboard/public/images/Logo.png"}
+            src={"globe.svg"}
             alt="logo-culters"
             width={120}
             height={31}
