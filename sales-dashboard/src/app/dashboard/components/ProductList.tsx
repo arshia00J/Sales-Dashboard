@@ -114,7 +114,7 @@ export default function ProductList() {
 
 
       <div className="block xl:hidden">
-        <div className="w-full h-[46px] pl-4 pt-[14.5px] bg-[#101011] rounded-t-[16px]">
+        <div className="w-full h-[46px] pl-4 pt-[14.5px] bg-[#F6F6F6] dark:bg-[#101011] rounded-t-[16px]">
           <p className="text-[#F6F6F6] font-bold text-[12px]">Product</p>
         </div>
           <div className="border-[#F6F6F6] dark:border-[#3D3D3D] border-[1px] rounded-b-2xl">
