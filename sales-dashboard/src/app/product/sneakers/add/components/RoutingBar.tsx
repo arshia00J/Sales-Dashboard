@@ -17,7 +17,7 @@ export default function RoutingBar() {
         
         </Link>
         <Image
-            src={"/arrow-right.png"}
+            src={"/simages/arrow-right.png"}
             alt="arrow"
             width={16}
             height={16}
@@ -28,7 +28,7 @@ export default function RoutingBar() {
             </p>
 
         <Image
-            src={"/arrow-right.png"}
+            src={"/simages/arrow-right.png"}
             alt="arrow"
             width={16}
             height={16}
@@ -41,7 +41,7 @@ export default function RoutingBar() {
 
 
           <Image
-            src={"/arrow-right.png"}
+            src={"/simages/arrow-right.png"}
             alt="arrow"
             width={16}
             height={16}

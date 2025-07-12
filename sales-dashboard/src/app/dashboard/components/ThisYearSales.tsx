@@ -45,7 +45,7 @@ export default function ThisYearSales() {
             Show All
           </p>
           <Image
-            src={"/arrow-up-right.png"}
+            src={"/simages/arrow-up-right.png"}
             alt="arrow"
             width={24}
             height={24}

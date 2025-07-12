@@ -29,7 +29,7 @@ export default function ProductInfo() {
       qty: Number(formData.quantity),
       date: new Date().toLocaleString(),
       status: formData.status === "available" ? "Available" : "Out of Stock",
-      img: "Produk.png",
+      img: "/simages/Produk.png",
     });
 
     setFormData({

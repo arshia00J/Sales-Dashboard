@@ -7,7 +7,7 @@ export default function Home() {
       {/* Profile */}
       <div className="flex items-center gap-4 relative">
         <Image
-          src={"/admin-profile.png"}
+          src={"/simages/admin-profile.png"}
           alt="admin profile"
           width={40}
           height={40}
@@ -25,14 +25,14 @@ export default function Home() {
       {/* Search & Menu Icons */}
       <div className="flex items-center gap-4">
         <Image
-          src={"/search.png"}
+          src={"/simages/search.png"}
           alt="search"
           width={24}
           height={24}
           className="dark:invert"
         />
         <Image
-          src={"/menu.png"}
+          src={"/simages/menu.png"}
           alt="menu"
           width={24}
           height={24}

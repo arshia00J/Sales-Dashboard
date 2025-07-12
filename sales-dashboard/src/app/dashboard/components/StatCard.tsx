@@ -20,7 +20,7 @@ export default function StatCard({
           {title}
         </h3>
         <Image
-          src={"/arrow-up-right.png"}
+          src={"/simages/arrow-up-right.png"}
           alt="arrow"
           width={24}
           height={24}
@@ -43,8 +43,8 @@ export default function StatCard({
           <Image
             src={
               isPositive
-                ? "akar-icons_statistic-up.png"
-                : "akar-icons_statistic-down.png"
+                ? "/simages/akar-icons_statistic-up.png"
+                : "/simages/akar-icons_statistic-down.png"
             }
             alt="chart"
             width={20}
