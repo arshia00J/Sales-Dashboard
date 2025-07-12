@@ -11,7 +11,7 @@ export default function Navbar() {
             className="w-full pl-4 pr-11 py-[9.5px] border border-[#B0B0B0] dark:border-[#D1D1D1] rounded-[12px] text-sm text-[#949494] focus:outline-none focus:ring-2 focus:ring-blue-300 "
         />
         <Image
-          src="/images/search.png"
+          src="search.png"
           alt="search"
           width={24}
           height={24}
@@ -24,7 +24,7 @@ export default function Navbar() {
         {/* Mail icon with badge */}
         <div className="relative p-2 dark:bg-[#3D3D3D] bg-[#F6F6F6] rounded-[9px]">
           <Image
-            src="/images/mail.png"
+            src="mail.png"
             alt="mail"
             width={20}
             height={20}
@@ -38,7 +38,7 @@ export default function Navbar() {
         {/* Notification icon with badge */}
         <div className="relative p-2 bg-[#F6F6F6] dark:bg-[#3D3D3D] rounded-[9px]">
           <Image
-            src="/images/notifications.png"
+            src="notifications.png"
             alt="notifications"
             width={20}
             height={20}
@@ -54,7 +54,7 @@ export default function Navbar() {
         {/* User Info */}
         <div className="flex items-center gap-2 relative">
           <Image
-            src="/images/admin-profile.png"
+            src="admin-profile.png"
             alt="profile"
             width={40}
             height={36}

@@ -15,7 +15,7 @@ export default function ProductList() {
           className="w-full pl-4 pr-11 py-[9.5px] border border-[#B0B0B0] dark:text-[#949494] dark:border-[#D1D1D1] rounded-[12px] text-sm text-[#949494] focus:outline-none focus:ring-2 focus:ring-blue-300 "
         />
         <Image
-          src="/images/search.png"
+          src="search.png"
           alt="search"
           width={24}
           height={24}
@@ -28,7 +28,7 @@ export default function ProductList() {
         <button className="flex items-center gap-1.5 border border-[#B0B0B0] dark:text-[#F6F6F6] rounded-xl p-2 text-[12px] font-bold text-[#454545]">
             Filter
             <Image
-                src={"/images/filter-list.png"}
+                src={"filter-list.png"}
                 alt="filter"
                 width={24}
                 height={24}
@@ -39,7 +39,7 @@ export default function ProductList() {
         <button className="flex items-center gap-1.5 border border-[#B0B0B0] rounded-xl p-2 text-[12px] font-bold text-[#454545] dark:text-[#F6F6F6]">
             Export
             <Image
-                src={"/images/download-2.png"}
+                src={"download-2.png"}
                 alt="filter"
                 width={24}
                 height={24}
@@ -53,7 +53,7 @@ export default function ProductList() {
         <button className="flex cursor-pointer items-center gap-1.5 bg-[#1A71F6] text-white rounded-xl p-2 text-[12px] font-bold ml-auto">
             New Product
             <Image
-                src={"/images/add.png"}
+                src={"add.png"}
                 alt="filter"
                 width={24}
                 height={24}
@@ -90,7 +90,7 @@ export default function ProductList() {
         <button className="flex items-center gap-1.5 border border-[#B0B0B0] rounded-xl p-2 text-[12px] font-bold text-[#454545] dark:text-[#F6F6F6]">
             Filter
             <Image
-                src={"/images/filter-list.png"}
+                src={"filter-list.png"}
                 alt="filter"
                 width={24}
                 height={24}
@@ -101,7 +101,7 @@ export default function ProductList() {
         <button className="flex items-center gap-1.5 border border-[#B0B0B0] rounded-xl p-2 text-[12px] font-bold text-[#454545] dark:text-[#F6F6F6]">
             Export
             <Image
-                src={"/images/download-2.png"}
+                src={"download-2.png"}
                 alt="filter"
                 width={24}
                 height={24}
@@ -113,7 +113,7 @@ export default function ProductList() {
           <button className="cursor-pointer flex items-center gap-1.5 bg-[#1A71F6] text-white rounded-xl p-2 text-[12px] font-bold ml-auto">
               New Product
               <Image
-                  src={"/images/add.png"}
+                  src={"add.png"}
                   alt="filter"
                   width={24}
                   height={24}

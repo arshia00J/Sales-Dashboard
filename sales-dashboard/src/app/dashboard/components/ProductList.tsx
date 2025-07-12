@@ -18,7 +18,7 @@ const products: Product[] = [
     name: "Kanky Kitadakate (Green)",
     price: 20,
     sales: 3000,
-    image: "/images/Produk.png",
+    image: "Produk.png",
     status: "Pending",
   },
   {
@@ -26,7 +26,7 @@ const products: Product[] = [
     name: "Kanky Kitadakate (Green)",
     price: 20,
     sales: 2311,
-    image: "/images/Produk.png",
+    image: "Produk.png",
     status: "Success",
   },
   {
@@ -34,7 +34,7 @@ const products: Product[] = [
     name: "Kanky Kitadakate (Green)",
     price: 20,
     sales: 2111,
-    image: "/images/Produk.png",
+    image: "Produk.png",
     status: "Failed",
   },
   {
@@ -42,7 +42,7 @@ const products: Product[] = [
     name: "Kanky Kitadakate (Green)",
     price: 20,
     sales: 1661,
-    image: "/images/Produk.png",
+    image: "Produk.png",
     status: "Success",
   },
 ];
@@ -54,7 +54,7 @@ export default function ProductList() {
         <h3 className="text-[16px] text-[#454545] dark:text-[#F6F6F6] font-semibold leading-[130%]">Product Popular</h3>
         <div className="flex items-center gap-1 text-[12px] font-semibold text-[#3D3D3D] dark:text-[#F6F6F6] cursor-pointer">
           Show All
-          <Image src="/images/arrow-up-right.png" alt="arrow" width={16} height={16} className="dark:invert" />
+          <Image src="arrow-up-right.png" alt="arrow" width={16} height={16} className="dark:invert" />
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export default function ProductList() {
                 <tr key={idx} className="border-t border-[#F6F6F6] dark:border-[#3D3D3D] h-[65px]">
                   <td className="flex items-center gap-2 p-3">
                     <Image
-                      src={product.image ?? "/images/Produk.png"}
+                      src={product.image ?? "Produk.png"}
                       alt={product.name}
                       width={41}
                       height={41}
@@ -167,7 +167,7 @@ function ProductItem({ product }: { product: Product }) {
           </div>
         </div>
         <Image
-          src={"/images/icon_arrow.png"}
+          src={"icon_arrow.png"}
           alt="arrow"
           width={32}
           height={28}

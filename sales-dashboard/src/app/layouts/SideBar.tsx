@@ -18,14 +18,14 @@ export default function Sidebar({
       <div className="w-full">
         <div className="flex flex-row w-full items-center justify-between mb-[45px]">
           <Image
-            src={"globe.svg"}
+            src={"Logo.png"}
             alt="logo-culters"
             width={120}
             height={31}
             className="pl-2 dark:invert"
           />
           <Image
-            src={"/images/Panel-close.png"}
+            src={"Panel-close.png"}
             alt="panel close"
             width={24}
             height={24}
@@ -35,7 +35,7 @@ export default function Sidebar({
 
         <div className="flex flex-row rounded-xl border border-[#E7E7E7] dark:border-[#737373] p-2 w-full mb-6">
           <Image
-            src={"/images/company-logo.png"}
+            src={"company-logo.png"}
             alt="company logo"
             width={40}
             height={40}
@@ -51,7 +51,7 @@ export default function Sidebar({
 
           <Link href={"/dashboard"}>
             <div className={pathname == "/dashboard" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] dark:text-[#454545] mb-1" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888] dark:text-[#B0B0B0]"}>
-              <Image src="/images/home-2.png" alt="dashboard" width={24} height={24} className="dark:invert" />
+              <Image src="home-2.png" alt="dashboard" width={24} height={24} className="dark:invert" />
               <p>Dashboard</p>
             </div>
           </Link>
@@ -61,10 +61,10 @@ export default function Sidebar({
             className={pathname.startsWith("/product") ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1 relative dark:text-[#454545]" : "cursor-pointer relative flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888] dark:text-[#B0B0B0]"}
             onClick={() => setIsProductOpen(!isProductOpen)}
           >
-            <Image src="/images/store.png" alt="product" width={24} height={24} className="dark:invert"/>
+            <Image src="store.png" alt="product" width={24} height={24} className="dark:invert"/>
             <p className="flex-grow">Product (119)</p>
             <Image
-              src="/images/arrow-up-simple.png"
+              src="arrow-up-simple.png"
               alt="arrow"
               width={24}
               height={24}
@@ -84,17 +84,17 @@ export default function Sidebar({
           )}
 
           <div className={pathname == "/transaction" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1 dark:text-[#454545]" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888] dark:text-[#B0B0B0]"}>
-            <Image src="/images/note-01.png" alt="transaction" width={24} height={24} className="dark:invert" />
+            <Image src="note-01.png" alt="transaction" width={24} height={24} className="dark:invert" />
             <p>Transaction (441)</p>
           </div>
 
           <div className={pathname == "/customers" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1 dark:text-[#454545]" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888] dark:text-[#B0B0B0]"}>
-            <Image src="/images/user-group.png" alt="customers" width={24} height={24} className="dark:invert"/>
+            <Image src="user-group.png" alt="customers" width={24} height={24} className="dark:invert"/>
             <p>Customers</p>
           </div>
 
           <div className={pathname == "/salesreport" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1 dark:text-[#454545]" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888] dark:text-[#B0B0B0]"}>
-            <Image src="/images/line-chart.png" alt="sales" width={24} height={24} className="dark:invert"/>
+            <Image src="line-chart.png" alt="sales" width={24} height={24} className="dark:invert"/>
             <p>Sales Report</p>
           </div>
         </div>
@@ -103,18 +103,18 @@ export default function Sidebar({
           <h3 className="text-[12px] text-[#888888] mb-2">TOOLS</h3>
 
           <div className={pathname == "/settings" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1 dark:text-[#454545]" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888] dark:text-[#B0B0B0]"}>
-            <Image src="/images/settings.png" alt="settings" width={24} height={24} className="dark:invert"/>
+            <Image src="settings.png" alt="settings" width={24} height={24} className="dark:invert"/>
             <p>Account & Settings</p>
           </div>
 
           <div className={pathname == "/help" ? "cursor-pointer flex items-center gap-2 p-2 rounded-xl bg-[#D9EDFF] text-[14px] font-bold text-[#454545] mb-1 dark:text-[#454545]" : "cursor-pointer flex items-center gap-2 p-2 rounded-xl text-[14px] text-[#888888] dark:text-[#B0B0B0]"}>
-            <Image src="/images/help.png" alt="help" width={24} height={24} className="dark:invert"/>
+            <Image src="help.png" alt="help" width={24} height={24} className="dark:invert"/>
             <p>Help</p>
           </div>
 
           <div className="flex items-center justify-between p-2 rounded-xl text-[14px] text-[#888888] dark:text-[#B0B0B0]">
             <div className="flex items-center gap-2">
-              <Image src="/images/moon.png" alt="dark" width={24} height={24} className="dark:invert"/>
+              <Image src="moon.png" alt="dark" width={24} height={24} className="dark:invert"/>
               <p>Dark Mode</p>
             </div>
             <label className="inline-flex items-center cursor-pointer">
@@ -138,7 +138,7 @@ export default function Sidebar({
 
       <div className="w-full flex items-center gap-2 border border-[#E7E7E7] dark:border-[#737373] rounded-xl p-2 mb-4">
         <Image
-          src="/images/admin-profile.png"
+          src="admin-profile.png"
           alt="profile"
           width={40}
           height={40}
@@ -147,7 +147,7 @@ export default function Sidebar({
           <p className="text-[14px] text-[#454545] dark:text-[#F6F6F6] font-bold">Guy Hawkins</p>
           <p className="text-[12px] text-[#B0B0B0]">Admin</p>
         </div>
-        <Image src="/images/arrow-up-simple.png" alt="dropdown" className="rotate-180" width={24} height={24} />
+        <Image src="arrow-up-simple.png" alt="dropdown" className="rotate-180" width={24} height={24} />
       </div>
     </div>
   );
