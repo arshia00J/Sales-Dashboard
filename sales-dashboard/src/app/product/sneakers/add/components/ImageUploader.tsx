@@ -14,7 +14,7 @@ return(
 
     <div className="flex-wrap flex gap-4">
         <div className="w-[108px] cursor-pointer flex flex-col gap-2 items-center justify-center h-[112px] rounded-[8px] border-1 border-dashed border-[#1A71F6] bg-[#EEF7FF]">
-            <Image src={"/image.png"} alt="image" width={32} height={32}/>
+            <Image src={"/Sales-Dashboard/image.png"} alt="image" width={32} height={32}/>
             <p className="text-[#737373] text-[12px] font-bold">Photo 1</p>
         </div>
 
