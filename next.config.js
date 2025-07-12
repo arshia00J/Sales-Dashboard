@@ -2,8 +2,8 @@ const isGithubPages = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
-  basePath: isGithubPages ? "/Sales-Dashboard" : "",
-  assetPrefix: isGithubPages ? "/Sales-Dashboard/" : "",
+  basePath: isGithubPages ? "/sales-dashboard" : "",
+  assetPrefix: isGithubPages ? "/sales-dashboard/" : "",
   images: { unoptimized: true }
 };
 
